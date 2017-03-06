@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">Événements sportifs</string>
     <string name="title_activity_settings">Settings</string>
-    <string name="cettesemaine">Cette semaine</string>
     <string name="calendrier">Votre calendrier</string>
-    <string name="listevents">Cette semaine</string>
+    <string name="listevents">Événements sportifs cette semaine</string>
 </resources>
