@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context="etien.projectandroidevents.MainActivity">
 
+    <Button
+        android:id="@+id/buttonCetteSemaine"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:text="@string/cettesemaine"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a voir"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/buttonCalendrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Votre calendrier"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="308dp" />
 </android.support.constraint.ConstraintLayout>
