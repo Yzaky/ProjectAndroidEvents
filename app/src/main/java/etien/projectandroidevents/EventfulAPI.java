@@ -44,7 +44,9 @@ public class EventfulAPI {
             allEvents[i] = new OneEvent(
                     anEvent.getString("title"),
                     anEvent.getString("description"),
-                    anEvent.getString("start_time"));
+                    anEvent.getString("start_time"),
+                    anEvent.getDouble("longitude"),
+                    anEvent.getDouble("latitude"));
         }
 
         return allEvents;

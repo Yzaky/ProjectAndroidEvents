@@ -37,4 +37,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:text="        " />
+
+    <TextView
+        android:id="@+id/textViewLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="125dp"
+        android:text="      " />
+
+    <TextView
+        android:id="@+id/textViewLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewStarttime"
+        android:layout_alignStart="@+id/textViewStarttime"
+        android:layout_alignTop="@+id/textViewLongitude"
+        android:layout_marginTop="33dp"
+        android:text="      " />
 </RelativeLayout>

@@ -25,6 +25,8 @@ public class ListEvents extends AppCompatActivity {
     private String[] titles = new String[page_size];
     private String[] descriptions = new String[page_size];
     private String[] start_times = new String[page_size];
+    private double[] longitudes = new double[page_size];
+    private double[] latitudes = new double[page_size];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,8 @@ public class ListEvents extends AppCompatActivity {
                 intent.putExtra("Title",titles[position]);
                 intent.putExtra("StartTime",start_times[position]);
                 intent.putExtra("Description",descriptions[position]);
+                intent.putExtra("Longitude",longitudes[position]);
+                intent.putExtra("Latitude",latitudes[position]);
 
                 startActivity(intent);
             }
@@ -116,6 +120,8 @@ public class ListEvents extends AppCompatActivity {
                 titles[i] = events[i].title;
                 descriptions[i] = events[i].description;
                 start_times[i] = events[i].start_time;
+                longitudes[i] = events[i].longitude;
+                latitudes[i] = events[i].latitude;
             }
 
             liste.setAdapter(new SimpleListAdapter());

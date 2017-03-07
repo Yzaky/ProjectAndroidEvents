@@ -25,7 +25,7 @@
         <activity android:name=".DetailsEvents" />
         <activity android:name=".ListEvents" />
         <activity android:name=".Calendar" />
-        <activity android:name=".GetCurrentGPSLocation"></activity>
+        <activity android:name=".Geolocalisation"></activity>
     </application>
 
 </manifest>
