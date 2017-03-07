@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -18,8 +19,9 @@ import java.io.IOException;
 public class ListEvents extends AppCompatActivity {
 
     ListView liste;
+    ProgressBar progressBar;
 
-    int page_size = 10;
+    int page_size = 50;
     private String[] titles = new String[page_size];
     private String[] descriptions = new String[page_size];
     private String[] start_times = new String[page_size];
@@ -29,8 +31,12 @@ public class ListEvents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_events);
 
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.VISIBLE);
+
         FetchArticle fetcher = new FetchArticle();
         fetcher.execute();
+
         liste = (ListView) findViewById(R.id.list);
 
         liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -113,6 +119,8 @@ public class ListEvents extends AppCompatActivity {
             }
 
             liste.setAdapter(new SimpleListAdapter());
+            progressBar.setVisibility(View.GONE);
+
         }
     }
 }

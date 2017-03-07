@@ -12,7 +12,7 @@ import okhttp3.Response;
 
 public class EventfulAPI {
 
-    String urlSport = "http://api.eventful.com/json/events/search?app_key=L9CqLCjxnqF2Fx6q&id=sports&location=Montreal&date=Future";
+    String urlSport = "http://api.eventful.com/json/events/search?app_key=L9CqLCjxnqF2Fx6q&id=sports&location=Montreal&date=Future&page_size=50";
 
     protected static OkHttpClient http = null;
 

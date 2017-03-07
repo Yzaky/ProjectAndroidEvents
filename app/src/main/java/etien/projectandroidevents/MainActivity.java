@@ -29,5 +29,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button buttonGeolocalisation = (Button) findViewById(R.id.buttonGeolocalisation);
+        buttonGeolocalisation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), GetCurrentGPSLocation.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
