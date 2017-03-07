@@ -1,7 +1,11 @@
 package etien.projectandroidevents;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DetailsEvents extends AppCompatActivity {
@@ -12,7 +16,7 @@ public class DetailsEvents extends AppCompatActivity {
         setContentView(R.layout.activity_details_events);
 
         String title, starttime, description;
-        double longitude, latitude;
+        final double longitude, latitude;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
@@ -50,8 +54,17 @@ public class DetailsEvents extends AppCompatActivity {
         textViewLongitude.setText("" + longitude);
 
         TextView textViewLatitude = (TextView) findViewById(R.id.textViewLatitude);
-        textViewLongitude.setText("" + latitude);
+        textViewLatitude.setText("" + latitude);
 
+        Button buttonGoogleMaps = (Button) findViewById(R.id.buttonGoogleMaps);
+        buttonGoogleMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.google.ca/maps/@" + latitude + "," + longitude + ",9z");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
 
     }
 }

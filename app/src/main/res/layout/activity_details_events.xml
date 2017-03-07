@@ -16,18 +16,18 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:text="        "
+        android:text="title"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewStarttime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTitle"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:text="      "
-        android:textSize="18sp" />
+        android:text="starttime"
+        android:textSize="18sp"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewDescription"
@@ -36,24 +36,32 @@
         android:layout_below="@+id/textViewStarttime"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
-        android:text="        " />
+        android:text="description" />
 
     <TextView
         android:id="@+id/textViewLongitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
         android:layout_marginBottom="125dp"
-        android:text="      " />
+        android:text="longitude"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewStarttime"
-        android:layout_alignStart="@+id/textViewStarttime"
+        android:layout_marginTop="31dp"
+        android:text="latitude"
         android:layout_alignTop="@+id/textViewLongitude"
-        android:layout_marginTop="33dp"
-        android:text="      " />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonGoogleMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLatitude"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Google maps" />
 </RelativeLayout>
