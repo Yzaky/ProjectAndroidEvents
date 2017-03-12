@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="15dp"
-    tools:context="etien.projectandroidevents.MainActivity">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent" >
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp" >
 
 
     <TextView
@@ -36,6 +36,7 @@
         android:layout_below="@+id/textViewStarttime"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
+        android:layout_marginBottom="75dp"
         android:text="description" />
 
     <Button
@@ -44,6 +45,8 @@
         android:layout_height="wrap_content"
         android:text="Google maps"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="35dp" />
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
+
+</ScrollView>
