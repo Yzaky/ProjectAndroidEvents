@@ -38,30 +38,12 @@
         android:layout_marginTop="19dp"
         android:text="description" />
 
-    <TextView
-        android:id="@+id/textViewLongitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="125dp"
-        android:text="longitude"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:id="@+id/textViewLatitude"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="latitude"
-        android:layout_alignTop="@+id/textViewLongitude"
-        android:layout_centerHorizontal="true" />
-
     <Button
         android:id="@+id/buttonGoogleMaps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewLatitude"
+        android:text="Google maps"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Google maps" />
+        android:layout_marginBottom="35dp" />
 </RelativeLayout>

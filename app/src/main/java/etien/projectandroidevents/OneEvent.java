@@ -8,6 +8,7 @@ public class OneEvent {
     public double longitude;
     public double latitude;
 
+    public OneEvent(){}
 
     public OneEvent( String title, String description, String start_time,
                      double longitude, double latitude){
@@ -17,4 +18,5 @@ public class OneEvent {
         this.longitude = longitude;
         this.latitude = latitude;
     }
+
 }

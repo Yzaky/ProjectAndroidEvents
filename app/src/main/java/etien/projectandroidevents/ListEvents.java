@@ -15,6 +15,8 @@ import android.widget.TextView;
 import org.json.JSONException;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ListEvents extends AppCompatActivity {
 
@@ -92,16 +94,16 @@ public class ListEvents extends AppCompatActivity {
         }
     }
 
-    public class FetchArticle extends AsyncTask<String, Object, OneEvent[]> {
+    public class FetchArticle extends AsyncTask<String, Object, List<OneEvent>> {
 
         @Override
-        protected OneEvent[] doInBackground(String... params) {
+        protected List<OneEvent> doInBackground(String... params) {
 
             // Fetcher un event
 
             EventfulAPI api = new EventfulAPI();
 
-            OneEvent[] events = new OneEvent[page_size];
+            List<OneEvent> events = new ArrayList<OneEvent>();
 
             try {
                 events = api.getAllEvents();
@@ -114,14 +116,14 @@ public class ListEvents extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(OneEvent[] events) {
+        protected void onPostExecute(List<OneEvent> events) {
 
             for(int i=0; i<page_size; i++) {
-                titles[i] = events[i].title;
-                descriptions[i] = events[i].description;
-                start_times[i] = events[i].start_time;
-                longitudes[i] = events[i].longitude;
-                latitudes[i] = events[i].latitude;
+                titles[i] = events.get(i).title;
+                descriptions[i] = events.get(i).description;
+                start_times[i] = events.get(i).start_time;
+                longitudes[i] = events.get(i).longitude;
+                latitudes[i] = events.get(i).latitude;
             }
 
             liste.setAdapter(new SimpleListAdapter());

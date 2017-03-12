@@ -5,6 +5,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -31,23 +35,32 @@ public class EventfulAPI {
         return new JSONObject(json);
     }
 
-    public OneEvent[] getAllEvents() throws IOException, JSONException {
+    public List<OneEvent> getAllEvents() throws IOException, JSONException {
 
         // Parse le JSON
         JSONObject object = getJSON(urlSport);
         int page_size = object.getInt("page_size");
         JSONArray events = object.getJSONObject("events").getJSONArray("event");
-        OneEvent[] allEvents = new OneEvent[page_size];
+        List<OneEvent> allEvents = new ArrayList<OneEvent>();
 
         for (int i = 0; i < page_size; i++) {
             JSONObject anEvent = events.getJSONObject(i);
-            allEvents[i] = new OneEvent(
+            allEvents.add(new OneEvent(
                     anEvent.getString("title"),
                     anEvent.getString("description"),
                     anEvent.getString("start_time"),
                     anEvent.getDouble("longitude"),
-                    anEvent.getDouble("latitude"));
+                    anEvent.getDouble("latitude")));
         }
+
+        Collections.sort(allEvents,new Comparator<OneEvent>(){
+            public int compare(OneEvent e1, OneEvent e2){
+                String time1 = e1.start_time.substring(0,10).replace("-","");
+                String time2 = e2.start_time.substring(0,10).replace("-","");
+                Integer int1 = Integer.parseInt(time1);
+                Integer int2 = Integer.parseInt(time2);
+                return int1 - int2;
+            }});
 
         return allEvents;
     }

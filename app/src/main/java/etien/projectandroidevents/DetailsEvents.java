@@ -50,17 +50,11 @@ public class DetailsEvents extends AppCompatActivity {
         TextView textViewDescription = (TextView) findViewById(R.id.textViewDescription);
         textViewDescription.setText(description);
 
-        TextView textViewLongitude = (TextView) findViewById(R.id.textViewLongitude);
-        textViewLongitude.setText("" + longitude);
-
-        TextView textViewLatitude = (TextView) findViewById(R.id.textViewLatitude);
-        textViewLatitude.setText("" + latitude);
-
         Button buttonGoogleMaps = (Button) findViewById(R.id.buttonGoogleMaps);
         buttonGoogleMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.google.ca/maps/@" + latitude + "," + longitude + ",9z");
+                Uri uri = Uri.parse("https://www.google.ca/maps/@" + latitude + "," + longitude + ",15z");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
