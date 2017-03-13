@@ -10,12 +10,13 @@ import android.widget.TextView;
 
 public class DetailsEvents extends AppCompatActivity {
 
+    String title, starttime, description;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_events);
 
-        String title, starttime, description;
         final double longitude, latitude;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
@@ -33,14 +34,12 @@ public class DetailsEvents extends AppCompatActivity {
                 latitude = extras.getDouble("Latitude");
             }
         } else {
-            title= (String) savedInstanceState.getSerializable("Titles");
-            starttime= (String) savedInstanceState.getSerializable("StartTime");
-            description= (String) savedInstanceState.getSerializable("Description");
-            longitude= (double) savedInstanceState.getSerializable("Longitude");
-            latitude= (double) savedInstanceState.getSerializable("Latitude");
-
+            title= (String) savedInstanceState.getString("Title");
+            starttime= (String) savedInstanceState.getString("StartTime");
+            description= (String) savedInstanceState.getString("Description");
+            latitude= (double) savedInstanceState.getDouble("Latitude");
+            longitude= (double) savedInstanceState.getDouble("Longitude");
         }
-
         TextView textViewTitle = (TextView) findViewById(R.id.textViewTitle);
         textViewTitle.setText(title);
 
@@ -59,6 +58,12 @@ public class DetailsEvents extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+    }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("Title", title);
+        outState.putString("StartTime", starttime);
+        outState.putString("Description", description);
+        super.onSaveInstanceState(outState);
     }
 }
