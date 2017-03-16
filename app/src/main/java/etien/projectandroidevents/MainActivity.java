@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         buttonCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Calendar.class);
+                Intent intent = new Intent(getApplicationContext(), CalendarAPI.class);
                 startActivity(intent);
             }
         });

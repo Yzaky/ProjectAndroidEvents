@@ -7,6 +7,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.MY_PERMISSION_ACCESS_COURSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
     <application
         android:allowBackup="true"
@@ -24,7 +26,7 @@
         </activity>
         <activity android:name=".DetailsEvents" />
         <activity android:name=".ListEvents" />
-        <activity android:name=".Calendar" />
+        <activity android:name=".CalendarAPI" />
         <activity android:name=".Geolocalisation"></activity>
     </application>
 

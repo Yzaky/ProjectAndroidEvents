@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class DetailsEvents extends AppCompatActivity {
 
     String title, starttime, description;
-
+    double longitude2, latitude2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +40,9 @@ public class DetailsEvents extends AppCompatActivity {
             latitude= (double) savedInstanceState.getDouble("Latitude");
             longitude= (double) savedInstanceState.getDouble("Longitude");
         }
+        longitude2 = longitude;
+        latitude2 = latitude;
+
         TextView textViewTitle = (TextView) findViewById(R.id.textViewTitle);
         textViewTitle.setText(title);
 
@@ -64,6 +67,8 @@ public class DetailsEvents extends AppCompatActivity {
         outState.putString("Title", title);
         outState.putString("StartTime", starttime);
         outState.putString("Description", description);
+        outState.putDouble("Latitude", latitude2);
+        outState.putDouble("Longitude", longitude2);
         super.onSaveInstanceState(outState);
     }
 }
