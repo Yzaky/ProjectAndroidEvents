@@ -1,46 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="etien.projectandroidevents.MainActivity">
-
+    android:orientation="vertical">
 
     <Button
-        android:id="@+id/buttonCalendar"
-        android:layout_width="wrap_content"
+        android:text="Evenements\nrécents"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/calendrier"
-        android:layout_marginBottom="139dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/buttonGeolocalisation"
-        android:layout_alignEnd="@+id/buttonGeolocalisation"
-        android:layout_alignLeft="@+id/buttonGeolocalisation"
-        android:layout_alignStart="@+id/buttonGeolocalisation" />
-
-    <Button
-        android:id="@+id/buttonGeolocalisation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonCalendar"
-        android:layout_alignEnd="@+id/buttonListEvents"
-        android:layout_alignLeft="@+id/buttonListEvents"
-        android:layout_alignRight="@+id/buttonListEvents"
-        android:layout_alignStart="@+id/buttonListEvents"
-        android:layout_marginBottom="61dp"
-        android:text="Geolocalisation" />
-
-    <Button
         android:id="@+id/buttonListEvents"
-        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:textSize="26dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        />
+
+    <Button
+        android:text="A voir"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="63dp"
-        android:text="@string/listevents"
-        android:layout_above="@+id/buttonGeolocalisation"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp" />
-</RelativeLayout>
+        android:id="@+id/buttonGeolocalisation"
+        android:layout_weight="1"
+        android:textSize="26dp"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:text="Votre Calendrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonCalendar"
+        android:layout_weight="1"
+        android:textSize="26dp"
+        android:layout_marginBottom="5dp"/>
+
+</LinearLayout>

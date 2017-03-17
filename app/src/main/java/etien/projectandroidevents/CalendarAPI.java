@@ -65,7 +65,6 @@ public class CalendarAPI extends AppCompatActivity {
             // Do something with the values...
         }
 */
-
     }
 }
 
