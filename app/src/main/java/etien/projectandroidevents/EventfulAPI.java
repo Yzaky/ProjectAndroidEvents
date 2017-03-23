@@ -24,7 +24,9 @@ public class EventfulAPI {
 
     public JSONObject getJSON(String url) throws IOException, JSONException {
 
-        if (http == null)
+        if (http == null) {
+
+        }
             http = new OkHttpClient();
 
         Request request = new Request.Builder().url(url).build();
