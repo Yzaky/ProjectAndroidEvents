@@ -14,6 +14,7 @@ public class DetailsEvents extends AppCompatActivity {
 
     String title, starttime, description;
     double longitude2, latitude2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,38 +24,39 @@ public class DetailsEvents extends AppCompatActivity {
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
             if(extras == null) {
-                title= null;
+                title = null;
                 starttime = null;
                 description = null;
                 longitude = 0;
                 latitude = 0;
             } else {
-                title= extras.getString("Title");
+                title = extras.getString("Title");
                 starttime = extras.getString("StartTime");
                 description = extras.getString("Description");
                 longitude = extras.getDouble("Longitude");
                 latitude = extras.getDouble("Latitude");
             }
         } else {
-            title= (String) savedInstanceState.getString("Title");
-            starttime= (String) savedInstanceState.getString("StartTime");
-            description= (String) savedInstanceState.getString("Description");
-            latitude= (double) savedInstanceState.getDouble("Latitude");
-            longitude= (double) savedInstanceState.getDouble("Longitude");
+            title = savedInstanceState.getString("Title");
+            starttime = savedInstanceState.getString("StartTime");
+            description = savedInstanceState.getString("Description");
+            latitude = savedInstanceState.getDouble("Latitude");
+            longitude = savedInstanceState.getDouble("Longitude");
         }
         longitude2 = longitude;
         latitude2 = latitude;
 
+        // déclaration des éléments du layout
         TextView textViewTitle = (TextView) findViewById(R.id.textViewTitle);
-        textViewTitle.setText(title);
-
         TextView textViewStarttime = (TextView) findViewById(R.id.textViewStarttime);
-        textViewStarttime.setText(starttime);
-
         TextView textViewDescription = (TextView) findViewById(R.id.textViewDescription);
+        Button buttonGoogleMaps = (Button) findViewById(R.id.buttonGoogleMaps);
+
+        // affichage des éléments du layont
+        textViewStarttime.setText(starttime);
+        textViewTitle.setText(title);
         textViewDescription.setText(description);
 
-        Button buttonGoogleMaps = (Button) findViewById(R.id.buttonGoogleMaps);
         buttonGoogleMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
