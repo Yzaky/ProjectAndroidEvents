@@ -10,4 +10,7 @@
     <string name="title">title</string>
     <string name="ajouter_au_calendrier">Ajouter au Calendrier</string>
     <string name="ajouter_au_favoris">Ajouter au favoris</string>
+    <string name="about">About</string>
+    <string name="preferences">Preferences</string>
+    <string name="help">Help</string>
 </resources>

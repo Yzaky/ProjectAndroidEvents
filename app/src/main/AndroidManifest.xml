@@ -23,10 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetailsEvents" />
-        <activity android:name=".ListEvents" />
-        <activity android:name=".CalendarAPI" />
+        <activity android:name=".DetailsEvents"></activity>
+        <activity android:name=".ListEvents"></activity>
+        <activity android:name=".CalendarAPI"></activity>
         <activity android:name=".Geolocalisation"></activity>
+        <activity android:name=".Preferences"></activity>
     </application>
 
 </manifest>
