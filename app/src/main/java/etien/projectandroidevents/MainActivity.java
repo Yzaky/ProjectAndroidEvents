@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button buttonListEvents = (Button) findViewById(R.id.buttonListEvents);
+        Button buttonCalendar = (Button) findViewById(R.id.buttonCalendar);
+        Button buttonGeolocalisation = (Button) findViewById(R.id.buttonGeolocalisation);
+
         buttonListEvents.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -22,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button buttonCalendar = (Button) findViewById(R.id.buttonCalendar);
+
         buttonCalendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button buttonGeolocalisation = (Button) findViewById(R.id.buttonGeolocalisation);
+
         buttonGeolocalisation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
