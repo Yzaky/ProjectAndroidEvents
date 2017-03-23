@@ -4,4 +4,10 @@
     <string name="calendrier">Votre calendrier</string>
     <string name="listevents">Événements sportifs cette semaine</string>
     <string name="title_activity_geolocalisation">Geolocalisation</string>
+    <string name="google_maps">Google maps</string>
+    <string name="description">description</string>
+    <string name="starttime">starttime</string>
+    <string name="title">title</string>
+    <string name="ajouter_au_calendrier">Ajouter au Calendrier</string>
+    <string name="ajouter_au_favoris">Ajouter au favoris</string>
 </resources>
