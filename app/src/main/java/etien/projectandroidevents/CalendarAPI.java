@@ -1,18 +1,7 @@
 package etien.projectandroidevents;
 
-import android.Manifest;
-import android.content.ContentResolver;
-import android.content.ContentValues;
-import android.content.DialogInterface;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.CalendarContract;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-
-import java.util.Calendar;
-import java.util.TimeZone;
 
 // TODO : lire https://inthecheesefactory.com/blog/things-you-need-to-know-about-android-m-permission-developer-edition/en
 // TODO : https://github.com/316k/IFT1155-Permissions/blob/master/app/src/main/java/ca/umontreal/iro/hurtubin/permissions/MainActivity.java
@@ -29,7 +18,7 @@ public class CalendarAPI extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calendar);
     }
-
+ /*
     public void createEventWrapper() {
 
         int hasPermission = checkSelfPermission(Manifest.permission.WRITE_CALENDAR);
@@ -48,7 +37,8 @@ public class CalendarAPI extends AppCompatActivity {
         }
 
     }
-
+*/
+ /*
     public void createEvent() {
         // Construct event details
         long startMillis = 0;
@@ -72,5 +62,6 @@ public class CalendarAPI extends AppCompatActivity {
         values.put(CalendarContract.Events.CALENDAR_ID, 3);
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
     }
+*/
 }
 
