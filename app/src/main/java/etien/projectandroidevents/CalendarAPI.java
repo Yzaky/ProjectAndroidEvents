@@ -40,6 +40,6 @@ public class CalendarAPI extends AppCompatActivity {
         values.put(CalendarContract.Events.CALENDAR_ID, 3);
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
 
-    }
+    } //J'ai teste le detailsEvents il marche, je teste poiur la premiere fois
 }
 
