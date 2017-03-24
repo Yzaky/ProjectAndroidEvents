@@ -1,6 +1,15 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/preferences"
+        android:title="@string/preferences" />
     <item android:id="@+id/about"
-        android:title="About" />
+        android:title="@string/about" />
     <item android:id="@+id/help"
-        android:title="Help" />
+        android:title="@string/help" />
+    <item
+        android:id="@+id/action_add_event"
+        android:icon="@drawable/plus_sign3"
+        android:title="@string/add_event_title"
+        app:showAsAction="ifRoom"/>
 </menu>

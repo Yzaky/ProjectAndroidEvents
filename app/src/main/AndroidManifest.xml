@@ -25,8 +25,9 @@
         </activity>
         <activity android:name=".DetailsEvents" />
         <activity android:name=".ListEvents" />
-        <activity android:name=".CalendarAPI" />
-        <activity android:name=".Geolocalisation"></activity>
+        <activity android:name=".Geolocalisation" />
+        <activity android:name=".Preferences" />
+        <activity android:name=".AddEvent"></activity>
     </application>
 
 </manifest>
