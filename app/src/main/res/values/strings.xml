@@ -13,4 +13,9 @@
     <string name="about">About</string>
     <string name="preferences">Preferences</string>
     <string name="help">Help</string>
+    <string name="rayon_de_recherche">Rayon de recherche</string>
+    <string name="unit_de_distance">Unité de distance</string>
+    <string name="utiliser_les_milles">Utiliser les milles</string>
+    <string name="ville">Ville</string>
+    <string name="montr_al">Montréal</string>
 </resources>
