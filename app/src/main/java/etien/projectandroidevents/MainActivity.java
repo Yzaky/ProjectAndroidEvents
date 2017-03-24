@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        createEventWrapper();
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
