@@ -18,4 +18,8 @@
     <string name="utiliser_les_milles">Utiliser les milles</string>
     <string name="ville">Ville</string>
     <string name="montr_al">Montréal</string>
+    <string name="code_postal">Code postal</string>
+    <string name="permettre_la_g_olocalisation">Permettre la géolocalisation</string>
+    <string name="a1a_1a1">A1A 1A1</string>
+    <string name="_20">20</string>
 </resources>
