@@ -86,6 +86,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.help:
                 //showHelp();
                 return true;
+            case R.id.action_add_event:
+                startActivity(new Intent(getApplicationContext(), AddEvent.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

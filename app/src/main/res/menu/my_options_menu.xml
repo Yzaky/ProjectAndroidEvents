@@ -7,4 +7,9 @@
         android:title="@string/about" />
     <item android:id="@+id/help"
         android:title="@string/help" />
+    <item
+        android:id="@+id/action_add_event"
+        android:icon="@drawable/plus_sign3"
+        android:title="@string/add_event_title"
+        app:showAsAction="ifRoom"/>
 </menu>
