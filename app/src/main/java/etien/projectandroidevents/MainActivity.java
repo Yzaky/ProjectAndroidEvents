@@ -17,8 +17,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.Calendar;
-
 public class MainActivity extends AppCompatActivity {
 
     final private int REQUEST_CODE_ADD_EVENT = 1;
@@ -87,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 //showHelp();
                 return true;
             case R.id.action_add_event:
-                startActivity(new Intent(getApplicationContext(), AddEvent.class));
-                return true;
+                String url = "http://eventful.com/events/new";
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse(url));
+                startActivity(i);
             default:
                 return super.onOptionsItemSelected(item);
         }
