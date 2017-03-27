@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 
@@ -37,13 +39,29 @@ public class ListEvents extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_events);
 
-        progressBar = (ProgressBar)findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.VISIBLE);
-
-        FetchArticle fetcher = new FetchArticle();
-        fetcher.execute();
-
         liste = (ListView) findViewById(R.id.list);
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+
+        if (savedInstanceState == null) {
+
+            progressBar.setVisibility(View.VISIBLE);
+
+            FetchArticle fetcher = new FetchArticle();
+            fetcher.execute();
+
+        } else {
+
+            progressBar.setVisibility(View.INVISIBLE);
+
+            titles = (String[]) savedInstanceState.getSerializable("titles");
+            descriptions = (String[]) savedInstanceState.getSerializable("descriptions");
+            start_times = (String[]) savedInstanceState.getSerializable("start_times");
+            longitudes = (double[]) savedInstanceState.getSerializable("longitudes");
+            latitudes = (double[]) savedInstanceState.getSerializable("latitudes");
+
+            liste.setAdapter(new SimpleListAdapter());
+
+        }
 
         liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -102,18 +120,13 @@ public class ListEvents extends AppCompatActivity {
         protected List<OneEvent> doInBackground(String... params) {
 
             // Fetcher un event
-
             EventfulAPI api = new EventfulAPI();
-
             List<OneEvent> events = new ArrayList<OneEvent>();
-
             try {
                 events = api.getAllEvents();
-
             } catch (IOException |JSONException e) {
                 e.printStackTrace();
             }
-
             return events;
         }
 
@@ -133,6 +146,16 @@ public class ListEvents extends AppCompatActivity {
 
         }
     }
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+
+        outState.putSerializable("titles",titles);
+        outState.putSerializable("descriptions",descriptions);
+        outState.putSerializable("start_times",start_times);
+        outState.putSerializable("longitudes",longitudes);
+        outState.putSerializable("latitudes",latitudes);
+    }
+
     public boolean onCreateOptionsMenu(Menu menu) {
 
         MenuInflater inflater = getMenuInflater();
