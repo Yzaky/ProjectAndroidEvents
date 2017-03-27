@@ -12,25 +12,25 @@
         android:layout_marginBottom="5dp"
         android:layout_marginTop="5dp"
         android:layout_weight="1"
-        android:text="Evenements\nrécents"
-        android:textSize="26dp" />
+        android:text="@string/v_nements_venir"
+        android:textSize="26sp" />
 
     <Button
-        android:text="A voir"
+        android:id="@+id/buttonGeolocalisation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonGeolocalisation"
+        android:layout_marginBottom="5dp"
         android:layout_weight="1"
-        android:textSize="26dp"
-        android:layout_marginBottom="5dp"/>
+        android:text="@string/favoris"
+        android:textSize="26sp" />
 
     <Button
-        android:text="Votre Calendrier"
+        android:text="@string/votre_calendrier"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/buttonCalendar"
         android:layout_weight="1"
-        android:textSize="26dp"
+        android:textSize="26sp"
         android:layout_marginBottom="5dp"/>
 
 </LinearLayout>

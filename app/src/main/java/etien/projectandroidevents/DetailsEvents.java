@@ -8,10 +8,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -76,7 +78,16 @@ public class DetailsEvents extends AppCompatActivity {
         // affichage des éléments du layont
         textViewStarttime.setText(starttime);
         textViewTitle.setText(title);
-        textViewDescription.setText(description);
+
+        if (description.isEmpty() || description == null) {
+            textViewDescription.setText("Description non disponible.");
+        } else {
+            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.N) {
+                textViewDescription.setText(Html.fromHtml(description));
+            } else {
+                textViewDescription.setText(Html.fromHtml(description, Html.FROM_HTML_MODE_COMPACT));
+            }
+        }
 
         // calculer date et heure
         calculerDateHeure();
