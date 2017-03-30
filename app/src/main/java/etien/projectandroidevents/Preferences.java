@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -15,6 +17,9 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import  android.widget.TextView.OnEditorActionListener;
 /**
  * Created by francis on 23/03/17.
  */
@@ -32,8 +37,12 @@ public class Preferences extends AppCompatActivity {
     private Switch geolocChooser;
 
     //ajouter par Philippe pour auto-complete
+
     private AutoCompleteTextView auto;
-    private final String[] VILLE = new String[]{"Montreal","Ottawa","Toronto"};
+    private String[] ville = new String[]{};
+    private String txt = "";
+    private final String URLBase = "https://maps.googleapis.com/maps/api/place/autocomplete/json?key=AIzaSyDrQ7esnK_zOh7NRE2rQsMhBtox6kHrPvs&input=";
+    private String URL;
     //fin ajout : donnée temporaires pour tester auto-complete
 
     @Override
@@ -42,11 +51,32 @@ public class Preferences extends AppCompatActivity {
         setContentView(R.layout.preferences_layout);
 
         //ajouter par Philippe pour auto-complete
-        auto = (AutoCompleteTextView)findViewById(R.id.cityText);
-        auto.setThreshold(2);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, VILLE);
+        auto = (AutoCompleteTextView)findViewById(R.id.cityText);
+        auto.setThreshold(1);
+
+      auto.addTextChangedListener(new TextWatcher() {
+          @Override
+          public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+          }
+
+          @Override
+          public void onTextChanged(CharSequence s, int start, int before, int count) {
+              txt = auto.getText().toString();
+              URL = URLBase + txt;
+              Toast.makeText(getApplicationContext(), URL, Toast.LENGTH_SHORT).show();
+          }
+
+          @Override
+          public void afterTextChanged(Editable s) {
+
+          }
+      });
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, ville);
         auto.setAdapter(adapter);
+
         //fin ajout
 
 
