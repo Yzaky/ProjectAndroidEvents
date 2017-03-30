@@ -30,10 +30,10 @@ public class Preferences extends AppCompatActivity {
     private EditText radiusField;
     private Switch milesChooser;
     private Switch geolocChooser;
- 
+
     //ajouter par Philippe pour auto-complete
     private AutoCompleteTextView auto;
-    private final String[] COULEUR = new String[]{"Montreal","Ottawa","Toronto"};
+    private final String[] VILLE = new String[]{"Montreal","Ottawa","Toronto"};
     //fin ajout : donnée temporaires pour tester auto-complete
 
     @Override
@@ -45,7 +45,7 @@ public class Preferences extends AppCompatActivity {
         auto = (AutoCompleteTextView)findViewById(R.id.cityText);
         auto.setThreshold(2);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, COULEUR);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, VILLE);
         auto.setAdapter(adapter);
         //fin ajout
 
