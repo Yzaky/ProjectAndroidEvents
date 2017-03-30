@@ -25,15 +25,12 @@
                 android:text="@string/ville"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/cityText"
-                android:layout_width="match_parent"
+                android:layout_width="181dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:gravity="end"
-                android:inputType="textPostalAddress"
-                android:selectAllOnFocus="true" />
+                android:text="AutoCompleteTextView" />
+
         </LinearLayout>
 
         <LinearLayout

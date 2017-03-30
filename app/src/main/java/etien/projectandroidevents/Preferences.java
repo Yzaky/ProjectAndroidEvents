@@ -7,6 +7,8 @@ import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -28,11 +30,25 @@ public class Preferences extends AppCompatActivity {
     private EditText radiusField;
     private Switch milesChooser;
     private Switch geolocChooser;
+ 
+    //ajouter par Philippe pour auto-complete
+    private AutoCompleteTextView auto;
+    private final String[] COULEUR = new String[]{"Montreal","Ottawa","Toronto"};
+    //fin ajout : donnée temporaires pour tester auto-complete
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.preferences_layout);
+
+        //ajouter par Philippe pour auto-complete
+        auto = (AutoCompleteTextView)findViewById(R.id.cityText);
+        auto.setThreshold(2);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, COULEUR);
+        auto.setAdapter(adapter);
+        //fin ajout
+
 
         prefLayout = (LinearLayout) findViewById(R.id.pref_layout);
         cityField = (EditText) findViewById(R.id.cityText);
