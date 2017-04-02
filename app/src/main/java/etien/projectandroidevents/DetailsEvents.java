@@ -4,14 +4,13 @@ import android.Manifest;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.CalendarContract;
-import android.support.v7.app.AlertDialog;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.util.Log;
@@ -20,7 +19,6 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Calendar;
 import java.util.TimeZone;
@@ -45,7 +43,7 @@ public class DetailsEvents extends AppCompatActivity {
         final double longitude, latitude;
         if (savedInstanceState == null) {
             Bundle extras = getIntent().getExtras();
-            if(extras == null) {
+            if (extras == null) {
                 title = null;
                 starttime = null;
                 description = null;
@@ -96,8 +94,7 @@ public class DetailsEvents extends AppCompatActivity {
         buttonGoogleMaps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.google.ca/maps/@" + latitude + "," + longitude + ",15z");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:<"+latitude+">,<"+longitude+">?q=<<"+latitude+">,<"+longitude+">"));
                 startActivity(intent);
             }
         });
@@ -143,9 +140,9 @@ public class DetailsEvents extends AppCompatActivity {
     // Crée un événement
     public void createEvent() {
         // Debug
-        Log.i("DetailsEvents",starttime);
-        Log.i("DetailsEvents","" + annee + " " + mois + " " + jour  + " " + heure  + " " + minute  + " " + seconde);
-        Log.i("DetailsEvents","" + annee + " " + mois + " " + jour  + " " + heure  + " " + minute  + " " + seconde);
+        Log.i("DetailsEvents", starttime);
+        Log.i("DetailsEvents", "" + annee + " " + mois + " " + jour + " " + heure + " " + minute + " " + seconde);
+        Log.i("DetailsEvents", "" + annee + " " + mois + " " + jour + " " + heure + " " + minute + " " + seconde);
 
         ContentResolver cr = getContentResolver();
         ContentValues values = new ContentValues();
@@ -157,6 +154,11 @@ public class DetailsEvents extends AppCompatActivity {
         values.put(CalendarContract.Events.DESCRIPTION, description);
         values.put(CalendarContract.Events.CALENDAR_ID, 3);
 
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_CALENDAR) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            requestPermissions(new String[]{Manifest.permission.WRITE_CALENDAR}, 1);
+            return;
+        }
         Uri uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
     }
 
