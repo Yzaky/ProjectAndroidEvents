@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
 android:layout_height="fill_parent" >
@@ -10,50 +11,98 @@ android:layout_height="fill_parent" >
         android:orientation="vertical"
         android:padding="12dp">
 
-
         <TextView
             android:id="@+id/textViewTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:text="@string/title"
-            android:textSize="24sp" />
+            android:layout_marginTop="5dp"
+            android:text="title"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
 
         <TextView
             android:id="@+id/textViewStarttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="17dp"
-            android:text="@string/starttime"
-            android:textSize="18sp" />
+            android:text="starttime"
+            android:textColor="@color/colorComplementaryDark"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imageViewEvent"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/logopingouin" />
 
         <TextView
             android:id="@+id/textViewDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="75dp"
-            android:layout_marginTop="19dp"
-            android:text="@string/description" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:text="description"
+            tools:ignore="HardcodedText" />
 
-        <Button
-            android:id="@+id/buttonGoogleMaps"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="-50dp"
-            android:text="@string/google_maps"
-            tools:ignore="DuplicateIds" />
+            android:paddingTop="5dp"
+            android:text="@string/texticonesactions"
+            android:textColor="@color/colorComplementaryDark"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageButton
+                    android:id="@+id/imageButtonAgenda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/agendaandroid" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonMaps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/googlemaps" />
+
+                <ImageButton
+                    android:id="@+id/imageButtonFavoris"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@null"
+                    android:maxHeight="50dp"
+                    android:maxWidth="50dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/plus_sign3" />
+
+            </LinearLayout>
 
         <Button
-            android:id="@+id/buttonFavoris"
+            android:id="@+id/buttonMainActivity"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/ajouter_au_favoris" />
-
-        <Button
-            android:id="@+id/buttonAddCalendrier"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/ajouter_au_calendrier" />
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="@string/retour_la_page_principale"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

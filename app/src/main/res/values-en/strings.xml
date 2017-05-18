@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Event Now</string>
+    <string name="code_postal">Zip code</string>
+    <string name="about">About Eventful</string>
+    <string name="add_event_title">Add an event</string>
+    <string name="ajouter_au_calendrier">Add to Calendar</string>
+    <string name="ajouter_au_favoris">Add to favorites</string>
+    <string name="calendrier">Your calendar</string>
+    <string name="favoris">Bookmarks</string>
+    <string name="google_maps">Google maps</string>
+    <string name="help">Application Help</string>
+    <string name="listevents">Sporting events this week</string>
+    <string name="permettre_la_g_olocalisation">Allow geolocation</string>
+    <string name="preferences">Your preferences</string>
+    <string name="rayon_de_recherche">Search radius</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="unit_de_distance">Distance unit</string>
+    <string name="utiliser_les_milles">Use miles</string>
+    <string name="v_nements_venir">Events to come</string>
+    <string name="ville">City</string>
+    <string name="votre_calendrier">Your Calendar</string>
+    <string name="ajouterFavoris">You just added an event to your favorites</string>
+    <string name="enleverFavoris">You just removed an event from your favorites</string>
+    <string name="descriptionNonDisponible">No description available</string>
+    <string name="app_bar_about">About Eventful</string>
+    <string name="app_bar_detailsevents">Your Eventful Event</string>
+    <string name="app_bar_eventsactivity">Your Eventful List</string>
+    <string name="app_bar_favoris">Your Bookmarks</string>
+    <string name="app_bar_help">Application Help</string>
+    <string name="app_bar_mainactivity">App Event Now</string>
+    <string name="app_bar_preferences">Your Preferences</string>
+
+    <string name="texticonesactions">
+        Here are the actions you can do with your Eventful event: \n
+        - Add to android calendar \n
+        - View on google maps \n
+        - Add to favorites
+    </string>
+
+    <string name="texthelp">
+        This application allows you to find events that suit you from
+        the Eventful event database. You can then manage them from various
+        ways, either by adding them to your Android calendar, or adding them to your
+        favorites that are accessible from the Event Now homepage. \n\n
+        Start by clicking on the event tab to access a list of events with
+        default criteria. You can then change your search criteria in
+        the preferences tab. You have access to a Google map with credentials for
+        each of the events. \n\n
+        When you have chosen an event, you can access its detailed information
+        as a representative image of the event in question in addition to a description. In
+        the same page you can manage the events according to the case where you want to put it in your
+        bookmarks or use the android phone calendar. \n\n
+        Have fun! \n\n
+    </string>
+
+    <string name="textabout">
+        This algorithm (called in API computing), represents a significant set
+        of event data in America and elsewhere. Through the Eventful API, we can access
+        data from a variety of sport, arts and film events. \n\nWe can see important information
+        that describes these events as their title, the time of the event, their representative
+        image and much more. \n\nYou can add events to the database from this free-of-use API.
+        Our application offers this functionality.\n\n
+        http://api.eventful.com/. \n\n
+        The authors of Event Now are: \n
+        -Etienne Monette \n
+        -Francis de Ladurantaye \n
+        -Youssef Zaky \n
+        -Philippe Boileau\n
+        -Atala Rchidi\n\n
+    </string>
+    <string name="rechercher_par">Search with:</string>
+    <string name="cat_gories">Categories:</string>
+    <string name="sauvegarder_les_param_tres">Save settings</string>
+    <string name="retour_la_page_principale">Go back to main page</string>
+    <string name="show_events_on_map">Show Events on Map</string>
+    <string name="options">Options</string>
+    <string name="v_enements">Events</string>
+    <string name="g_olocalisation">Geolocation</string>
+    <string name="geoloc_impossible">Unable to access position, using city as focal point for the search.</string>
+    <string name="category1">Art Galleries &amp; Exhibits</string>
+    <string name="category2">Business &amp; Networking</string>
+    <string name="category3">Comedy</string>
+    <string name="category4">Concerts &amp; Tour Dates</string>
+    <string name="category5">Conferences &amp; Tradeshows</string>
+    <string name="category6">Education</string>
+    <string name="category_all">No Filter (keep all categories)</string>
+    <string name="category10">Fundraising &amp; Charity</string>
+    <string name="category11">Health &amp; Wellness</string>
+    <string name="category12">Holiday</string>
+    <string name="category13">Kids &amp; Family</string>
+    <string name="category14">Literary &amp; Books</string>
+    <string name="category15">Museums &amp; Attractions</string>
+    <string name="category16">Neighborhood</string>
+    <string name="category17">Nightlife &amp; Singles</string>
+    <string name="category18">Organizations &amp; Meetups</string>
+    <string name="category19">Outdoors &amp; Recreation</string>
+    <string name="category20">Performing Arts</string>
+    <string name="category21">Pets</string>
+    <string name="category22">Politics &amp; Activism</string>
+    <string name="category23">Religion &amp; Spirituality</string>
+    <string name="category24">Sales &amp; Retail</string>
+    <string name="category25">Science</string>
+    <string name="category26">Sports</string>
+    <string name="category27">Technology</string>
+    <string name="category28">University &amp; Alumni</string>
+    <string name="category7">Festivals</string>
+    <string name="category8">Film</string>
+    <string name="category9">Food &amp; Wine</string>
+    <string name="category_other">Other &amp; Miscellaneous</string>
+</resources>

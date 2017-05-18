@@ -1,29 +1,112 @@
 <resources>
-    <string name="app_name">EventNow</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="app_name">North Events Now</string>
+    <string name="app_bar_favoris">Vos événements favoris</string>
+    <string name="app_bar_help">Aide pour l\'application</string>
+    <string name="app_bar_about">À propos de Eventful</string>
+    <string name="app_bar_mainactivity">App Event Now</string>
+    <string name="app_bar_preferences">Vos préférences</string>
+    <string name="app_bar_eventsactivity">Votre liste Eventful</string>
+    <string name="app_bar_detailsevents">Votre événement Eventful</string>
+
+    <string name="descriptionNonDisponible">Description non disponible</string>
+    <string name="enleverFavoris">Vous avez enlevé un événement de vos favoris</string>
+    <string name="ajouterFavoris">Vous avez ajouté un événement à vos favoris</string>
+    <string name="title_activity_settings">Réglages</string>
     <string name="calendrier">Votre calendrier</string>
     <string name="listevents">Événements sportifs cette semaine</string>
-    <string name="title_activity_geolocalisation">Geolocalisation</string>
     <string name="google_maps">Google maps</string>
-    <string name="description">description</string>
-    <string name="starttime">starttime</string>
-    <string name="title">title</string>
     <string name="ajouter_au_calendrier">Ajouter au Calendrier</string>
-    <string name="ajouter_au_favoris">Ajouter au favoris</string>
-    <string name="about">About</string>
-    <string name="preferences">Preferences</string>
-    <string name="help">Help</string>
+    <string name="ajouter_au_favoris">Ajouter aux\nfavoris</string>
+    <string name="about">À propos de Eventful</string>
+    <string name="preferences">Vos préférences</string>
+    <string name="help">Aide pour l\'application</string>
     <string name="rayon_de_recherche">Rayon de recherche</string>
     <string name="unit_de_distance">Unité de distance</string>
     <string name="utiliser_les_milles">Utiliser les milles</string>
     <string name="ville">Ville</string>
-    <string name="montr_al">Montréal</string>
     <string name="code_postal">Code postal</string>
     <string name="permettre_la_g_olocalisation">Permettre la géolocalisation</string>
-    <string name="a1a_1a1">A1A 1A1</string>
-    <string name="_20">20</string>
     <string name="add_event_title">Ajouter un événement</string>
     <string name="v_nements_venir">Événements à venir</string>
     <string name="favoris">Favoris</string>
     <string name="votre_calendrier">Votre Calendrier</string>
+    <string name="title_activity_maps">Carte</string>
+    <string name="texticonesactions">
+        Voici les actions que vous pouvez faire avec votre événement Eventful:\n
+        - Ajouter au calendrier android\n
+        - Visualiser sur google maps\n
+        - Ajouter aux favoris
+    </string>
+    <string name="texthelp">
+        Cette application vous permet de trouver des événements qui vous conviennent à partir de
+        la banque de données d\'événements Eventful. Vous pouvez ensuite les gérer de diverses
+        façons, soit en les ajoutant à votre calendrier Android, soit en les ajoutant à vos
+        favoris qui sont accessibles à partir de la page d\'acceuil de Event Now.\n\n
+        Commencez par cliquer sur l\'onglet événement pour accéder à une liste d\'événements avec
+        des critères par défaut. Vous pouvez ensuite modifier vos critères de recherche dans
+        l\'onglet des préférences. Vous avez accès à une carte Google avec des identifiants pour
+        chacun des événements.\n\n
+        Lorsque vous avez choisi un événement, vous pouvez accéder à ses informations détaillées
+        comme une image représentative de l\'événement en question en plus d\'une description. Dans
+        la même page vous pouvez gérer l\'événements selon le cas où vous voulez le mettre dans vos
+        favoris ou utiliser l\'agenda du téléphone android.\n\n
+        Amusez-vous bien !\n\n
+
+    </string>
+    <string name="textabout">
+        Cet algorithme (appelé en informatique API), représente un
+        ensemble important de données d\'événements en Amérique et ailleurs. \n\n
+        Grâce à l\'API Eventful, nous pouvons accéder aux données d\'événements variés autant concernant le sport
+        que dans les arts ou le cinéma. Nous pouvons voir des informations importantes qui décrient
+        ces événements commme leur titre, l\'heure de l\'événement, leur image
+        représentative et bien d\'autres informations.\n\n
+        On peut ajouté des événements à la base de données à partir de cet API gratuit d\'utilisation. Notre
+        application offre d\'ailleurs cette fonctionnalité.\n\n
+        http://api.eventful.com/. \n\n
+        Les auteurs de Event Now sont:\n
+        -Etienne Monette\n
+        -Francis de Ladurantaye\n
+        -Youssef Zaky\n
+        -Philippe Boileau\n
+        -Atala Rchidi\n
+    </string>
+    <string name="rechercher_par">Rechercher par :</string>
+    <string name="cat_gories">Catégories :</string>
+    <string name="sauvegarder_les_param_tres">Sauvegarder les paramètres</string>
+    <string name="retour_la_page_principale">Retour à la page principale</string>
+    <string name="show_events_on_map">Voir les événements sur la carte</string>
+    <string name="options">Options</string>
+    <string name="v_enements">Événements</string>
+    <string name="g_olocalisation">Géolocalisation</string>
+    <string name="geoloc_impossible">Impossible d\'accéder à la position, utilisation de la ville comme point central de la recherche.</string>
+    <string name="category1">Galleries d\'art et expositions</string>
+    <string name="category2">Affaires et réseautage</string>
+    <string name="category3">Comédie</string>
+    <string name="category4">Concerts et tournées</string>
+    <string name="category5">Conférences et salons</string>
+    <string name="category6">Éducation</string>
+    <string name="category7">Festivals</string>
+    <string name="category8">Films</string>
+    <string name="category9">Vin et nourriture</string>
+    <string name="category10">Collectes de fonds et charité</string>
+    <string name="category11">Santé et bien-être</string>
+    <string name="category_all">Aucun filtre (toutes les catégories)</string>
+    <string name="category12">Vacances</string>
+    <string name="category13">Enfants et famille</string>
+    <string name="category14">Littérature et livres</string>
+    <string name="category15">Musées et attractions</string>
+    <string name="category16">Voisinage</string>
+    <string name="category17">Célibataires et vie nocturne</string>
+    <string name="category18">Organisations et rencontres</string>
+    <string name="category19">Plein air et loisirs</string>
+    <string name="category20">Arts de la scène</string>
+    <string name="category21">Animaux domestiques</string>
+    <string name="category22">Politique et activisme</string>
+    <string name="category23">Religion et spiritualité</string>
+    <string name="category24">Vente au détail</string>
+    <string name="category25">Science</string>
+    <string name="category26">Sports</string>
+    <string name="category27">Technologie</string>
+    <string name="category28">Université et retrouvailles</string>
+    <string name="category_other">Autres et divers</string>
 </resources>

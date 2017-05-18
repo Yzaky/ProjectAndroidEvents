@@ -7,10 +7,11 @@ android {
         applicationId "etien.projectandroidevents"
         minSdkVersion 23
         targetSdkVersion 25
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "1.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -23,6 +24,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile files('libs/picasso-2.5.2.jar')
     compile files('libs/eventfulapi.jar')
     compile files('libs/okio-1.11.0.jar')
     compile files('libs/okhttp-3.6.0.jar')
@@ -39,8 +41,14 @@ dependencies {
     compile 'com.android.support:design:25.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile 'com.google.android.gms:play-services-auth:8.3.0'
+    compile 'com.google.android.gms:play-services-maps:10.2.1'
     testCompile 'junit:junit:4.12'
 }
+
+
+
+
+
 
 
 

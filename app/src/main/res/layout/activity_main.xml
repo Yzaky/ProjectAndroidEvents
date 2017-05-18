@@ -1,28 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorComplementary">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/logopingouin" />
 
     <Button
         android:id="@+id/buttonListEvents"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
         android:layout_weight="1"
         android:text="@string/v_nements_venir"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"/>
 
     <Button
-        android:id="@+id/buttonGeolocalisation"
+        android:id="@+id/buttonFavorites"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:layout_weight="1"
         android:text="@string/favoris"
-        android:textSize="26sp" />
+        android:textSize="26sp"
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary" />
 
     <Button
         android:text="@string/votre_calendrier"
@@ -31,6 +45,7 @@
         android:id="@+id/buttonCalendar"
         android:layout_weight="1"
         android:textSize="26sp"
-        android:layout_marginBottom="5dp"/>
+        android:textColor="#FFFFFF"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/rechercher_par"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:id="@+id/searchRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/geolocRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/g_olocalisation" />
+
+            <RadioButton
+                android:id="@+id/zipCodeRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/code_postal"
+                android:textAppearance="@android:style/TextAppearance.Material.Small" />
+
+            <RadioButton
+                android:id="@+id/cityRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/ville"
+                android:textAppearance="@android:style/TextAppearance.Material.Small" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/zipCodeText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical|end"
+                android:text="zipCodeText"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/cityText"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center_vertical|end"
+                android:text="cityText"
+                android:textAppearance="@android:style/TextAppearance.Material.Medium"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:text="@string/cat_gories"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium" />
+
+    <ListView
+        android:id="@+id/categoryListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp" />
+
+</LinearLayout>
